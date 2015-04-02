@@ -15,4 +15,4 @@
             }
 
         let functionalSolution = 
-            getTriplets |> Seq.filter isTriplet |> Seq.head |> Seq.fold (fun acc x -> acc * x) 1
+            getTriplets |> Seq.filter isTriplet |> Seq.head |> Seq.reduce (*)

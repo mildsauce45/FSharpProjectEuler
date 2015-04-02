@@ -17,10 +17,4 @@
             forwardArr.SequenceEqual backwardArr
 
         let functionalSolution =
-            numbers |> 
-            Seq.map (
-                Seq.fold (fun x y -> 
-                    x * y) 1
-            ) 
-            |> Seq.filter isPalindrome 
-            |> Seq.max
+            numbers |> Seq.map (Seq.fold (fun x y -> x * y) 1) |> Seq.filter isPalindrome |> Seq.max

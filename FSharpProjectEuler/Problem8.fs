@@ -25,7 +25,7 @@
         let functionalSolution =
             let numbers = numberString |> Seq.map (fun x -> int32(x.ToString()))
 
-            numbers |> Seq.windowed 13 |> Seq.map (Seq.fold (fun acc x -> acc * x) 1) |> Seq.max
+            numbers |> Seq.windowed 13 |> Seq.map (Seq.reduce (*)) |> Seq.max
 
 
 
